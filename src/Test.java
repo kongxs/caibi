@@ -3,7 +3,9 @@ import android.content.ComponentName;
 import android.content.Intent;
 import android.content.ServiceConnection;
 import android.os.Bundle;
+import android.os.Handler;
 import android.os.IBinder;
+import android.os.Message;
 
 public class Test extends Activity {
 
@@ -30,6 +32,15 @@ public class Test extends Activity {
 
         bindService(service , conn , 1);
 
+
+        new Handler().post(new Runnable() {
+            @Override
+            public void run() {
+
+            }
+        }) ;
+
+        new Handler().sendMessage(Message.obtain());
 
     }
 }
